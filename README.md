@@ -83,7 +83,7 @@ test:
 
 ```
 
-NOTE: You can change the database names on the 'databases' node of the configuration.json file. (This is important because the database is not on the ruby machine, so they need to be created manually on the database machine, the command rake db:create will not work because of that)
+**NOTE:** You can change the database names on the 'databases' node of the configuration.json file. (This is important because the database is not on the ruby machine, so they need to be created manually on the database machine, the command rake db:create will not work because of that)
 
 
 ##Contact:
