@@ -1,0 +1,39 @@
+{
+    "name": "configuration",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {},
+    "override_attributes": {
+        "postgresql": {
+            "config": {
+                "listen_addresses": "*",
+                "ssl": false
+            },
+            "password": {
+                "postgres": "postgres"
+            },
+            "pg_hba": [
+                {
+                    "type": "host",
+                    "db": "all",
+                    "user": "all",
+                    "addr": "0.0.0.0/0",
+                    "method": "md5"
+                }
+            ]
+        },
+        "databases": {
+            "development": "development_database",
+            "test": "test_database"
+        }
+    },
+    "description": "Configuring database vm",
+    "run_list": [
+        "recipe[apt]",
+        "recipe[build-essential]",
+        "recipe[openssl]",
+        "recipe[locale]",
+        "recipe[postgresql::server]",
+        "recipe[databases]"
+    ]
+}

@@ -1,0 +1,1 @@
+execute "sudo gem install pg --no-ri --no-rdoc"
