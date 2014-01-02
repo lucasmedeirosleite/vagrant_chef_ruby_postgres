@@ -1,1 +1,0 @@
-execute "sudo gem install rmagick --no-ri --no-rdoc"

@@ -1,6 +1,21 @@
-# Vagrant + Chef Solo + Ruby 2.1 + PostgreSQL
+# Vagrant + Chef Solo + Berkshelf + Ruby 2.1 + PostgreSQL
 
 This is a vagrant base project which has two machines, one for the postgres database and other for the ruby based applications
+
+All cookbooks are managed with [berkshelf](https://github.com/berkshelf/berkshelf)
+
+## Installation
+
+You will need:
+
+* vagrant (1.2.7)
+* You need to install the vagrant-berkshelf plugin with: **vagrant plugin install vagrant-berkshelf**
+
+**NOTE:** vagrant-berkshelf does not work on vagrant 1.4.x (not tested on 1.3.x series)
+
+##Starting the machines
+
+Just run: **vagrant up**
 
 ##Database machine
 
@@ -70,11 +85,6 @@ test:
 
 NOTE: You can change the database names on the 'databases' node of the configuration.json file. (This is important because the database is not on the ruby machine, so they need to be created manually on the database machine, the command rake db:create will not work because of that)
 
-##Starting the machines
-
-Just run: 
-* vagrant up db
-* vagrant up
 
 ##Contact:
 

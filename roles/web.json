@@ -1,0 +1,23 @@
+{
+    "name": "web",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {},
+    "override_attributes": {
+        "postgresql": {
+            "version": "9.1"
+        }
+    },
+    "description": "Configuring web vm",
+    "run_list": [
+        "recipe[apt]",
+        "recipe[build-essential]",
+        "recipe[openssl]",
+        "recipe[main]",
+        "recipe[git]",
+        "recipe[imagemagick]",
+        "recipe[postgresql-client]",
+        "recipe[ruby]",
+        "recipe[ruby::pg]"
+    ]
+}
