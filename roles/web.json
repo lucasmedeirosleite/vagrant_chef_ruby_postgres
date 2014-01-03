@@ -6,6 +6,9 @@
     "override_attributes": {
         "postgresql": {
             "version": "9.1"
+        },
+        "ruby": {
+            "version": "2.1"
         }
     },
     "description": "Configuring web vm",

@@ -1,4 +1,4 @@
-# Vagrant + Chef Solo + Berkshelf + Ruby 2.1 + PostgreSQL
+# Vagrant + Chef Solo + Berkshelf + Ruby + PostgreSQL
 
 This is a vagrant base project which has two machines, one for the postgres database and other for the ruby based applications
 
@@ -45,8 +45,47 @@ And it also has installed:
 * git
 * imagemagick
 * postgresql-client-9.1
-* ruby 2.1
+* ruby 2.1 (by default)
 * ruby gem pg (for postgresql integration)
+
+## Changing ruby version
+
+This project supports the following versions of ruby: 
+
+* 1.9.3 
+* 2.0.0 
+* 2.1.0
+
+You can change de the default version inside the web.json role like this:
+
+```json
+{
+    "name": "web",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "default_attributes": {},
+    "override_attributes": {
+        "postgresql": {
+            "version": "9.1"
+        },
+        "ruby": {
+            "version": "2.1 or 2.0 or 1.9"
+        }
+    },
+    "description": "Configuring web vm",
+    "run_list": [
+        "recipe[apt]",
+        "recipe[build-essential]",
+        "recipe[openssl]",
+        "recipe[main]",
+        "recipe[git]",
+        "recipe[imagemagick]",
+        "recipe[postgresql-client]",
+        "recipe[ruby]",
+        "recipe[ruby::pg]"
+    ]
+}
+```
 
 ## Accessing the database via pgAdmin
 
