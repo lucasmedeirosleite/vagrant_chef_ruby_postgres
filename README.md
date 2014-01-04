@@ -14,6 +14,7 @@ Run:
 ##Starting the machines
 
 **vagrant up db**
+
 **vagrant up web**
 
 ##Database machine
