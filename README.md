@@ -6,7 +6,7 @@ All cookbooks are managed with [berkshelf](https://github.com/berkshelf/berkshel
 
 ## Installation
 
-You will need:
+Run:
 
 * **vagrant plugin install vagrant-omnibus**
 * **vagrant plugin install vagrant-berkshelf**
