@@ -8,14 +8,13 @@ All cookbooks are managed with [berkshelf](https://github.com/berkshelf/berkshel
 
 You will need:
 
-* vagrant (1.2.7)
-* You need to install the vagrant-berkshelf plugin with: **vagrant plugin install vagrant-berkshelf**
-
-**NOTE:** vagrant-berkshelf does not work on vagrant 1.4.x (not tested on 1.3.x series)
+* **vagrant plugin install vagrant-omnibus**
+* **vagrant plugin install vagrant-berkshelf**
 
 ##Starting the machines
 
-Just run: **vagrant up**
+**vagrant up db**
+**vagrant up web**
 
 ##Database machine
 
